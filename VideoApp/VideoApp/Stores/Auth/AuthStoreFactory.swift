@@ -24,11 +24,7 @@ class AuthStoreFactory {
             return InternalAuthStore(api: API.shared, appSettingsStore: AppSettingsStore.shared)
         case .videoCommunity:
             API.shared.errorResponseDecoder = CommunityAPIErrorResponseDecoder()
-            return CommunityAuthStore(
-                api: API.shared,
-                appSettingsStore: AppSettingsStore.shared,
-                keychainStore: KeychainStore()
-            )
+            return InternalAuthStore(api: API.shared, appSettingsStore: AppSettingsStore.shared)
         }
     }
 }

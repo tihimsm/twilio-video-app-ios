@@ -401,6 +401,7 @@
 		DCDCD37F241930A7004A30FC /* TwilioAccessTokenStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCD37D241930A7004A30FC /* TwilioAccessTokenStoreFactory.swift */; };
 		DCDCD380241930A7004A30FC /* TwilioAccessTokenStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCD37D241930A7004A30FC /* TwilioAccessTokenStoreFactory.swift */; };
 		DCDCD38624194CF0004A30FC /* CommunityTwilioAccessTokenStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCD38524194CF0004A30FC /* CommunityTwilioAccessTokenStoreSpec.swift */; };
+		DCDCD3872422E719004A30FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC85CA5B23CCDACC00BF016F /* GoogleService-Info.plist */; };
 		DCE965BB237492410002EC78 /* AppInfoStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE965BA237492410002EC78 /* AppInfoStoreSpec.swift */; };
 		DCE965C9237498F50002EC78 /* AppInfoStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE965C8237498F50002EC78 /* AppInfoStoreSpec.swift */; };
 		DCEC3CF82385F8CA00EBDEBF /* EditTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEC3CF72385F8CA00EBDEBF /* EditTextViewModel.swift */; };
@@ -1721,6 +1722,7 @@
 			files = (
 				DCAEBF212383342C00141D2D /* DestructiveButtonCell.xib in Resources */,
 				4B00127E1FBA52E5004A587E /* LaunchScreen.storyboard in Resources */,
+				DCDCD3872422E719004A30FC /* GoogleService-Info.plist in Resources */,
 				DCAEBF352383560500141D2D /* EditTextCell.xib in Resources */,
 				DC44C2C723870D0800205174 /* BasicCell.xib in Resources */,
 				4B0012811FBA52E5004A587E /* Assets.xcassets in Resources */,

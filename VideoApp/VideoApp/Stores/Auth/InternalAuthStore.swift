@@ -35,7 +35,6 @@ class InternalAuthStore: NSObject, AuthStoreWriting {
     func start() {
         FirebaseApp.configure()
         googleSignIn.clientID = FirebaseApp.app()?.options.clientID
-        googleSignIn.hostedDomain = "twilio.com"
         googleSignIn.delegate = self
     }
     
@@ -103,13 +102,7 @@ extension InternalAuthStore: GIDSignInDelegate {
 }
 
 private extension Environment {
-    var host: String {
-        switch self {
-        case .production: return "app.video.bytwilio.com/api/v1"
-        case .staging: return "app.stage.video.bytwilio.com/api/v1"
-        case .development: return "app.dev.video.bytwilio.com/api/v1"
-        }
-    }
+    var host: String { "video-app2-3626-dev.twil.io" }
 }
 
 private extension AuthError {

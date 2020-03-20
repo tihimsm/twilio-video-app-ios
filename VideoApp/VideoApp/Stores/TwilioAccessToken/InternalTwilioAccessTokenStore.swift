@@ -35,13 +35,13 @@ class InternalTwilioAccessTokenStore: TwilioAccessTokenStoreReading {
         authStore.refreshIDToken { [weak self] in
             guard let self = self else { return }
 
-            let request = InternalCreateTwilioAccessTokenRequest(
-                identity: self.appSettingsStore.userIdentity.nilIfEmpty ?? self.authStore.userDisplayName,
-                roomName: roomName,
-                topology: .init(topology: self.appSettingsStore.topology)
+            let request = CommunityCreateTwilioAccessTokenRequest(
+                passcode: API.shared.config.idToken!,
+                userIdentity: self.authStore.userDisplayName,
+                roomName: roomName
             )
             
-            self.api.request(request, completion: completion)
+            self.api.request(request) { completion($0.map { $0.token }) }
         }
     }
 }

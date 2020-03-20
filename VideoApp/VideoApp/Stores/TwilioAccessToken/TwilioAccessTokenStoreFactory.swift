@@ -26,7 +26,7 @@ class TwilioAccessTokenStoreFactory {
                 authStore: AuthStore.shared
             )
         case .videoCommunity:
-            return CommunityTwilioAccessTokenStore(
+            return InternalTwilioAccessTokenStore(
                 api: API.shared,
                 appSettingsStore: AppSettingsStore.shared,
                 authStore: AuthStore.shared
