@@ -94,7 +94,7 @@ class ParticipantsStore {
     
     private func deleteParticipants(participants: [Participant]) {
         let new = self.participants.filter { participant in
-            participants.first { $0 === participant } == nil
+            !participants.contains(where: { $0 === participant })
         }
 
         postDiff(new: new)

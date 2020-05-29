@@ -164,11 +164,11 @@ extension LocalParticipant: LocalParticipantDelegate {
 
 extension LocalParticipant: CameraManagerDelegate {
     func trackSourceWasInterrupted(track: LocalVideoTrack) {
-        participant?.unpublishVideoTrack(track.track)
+        track.track.isEnabled = false
     }
     
     func trackSourceInterruptionEnded(track: LocalVideoTrack) {
-        participant?.publishVideoTrack(track.track)
+        track.track.isEnabled = true
     }
 }
 
