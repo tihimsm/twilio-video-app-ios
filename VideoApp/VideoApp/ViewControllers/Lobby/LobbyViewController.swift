@@ -35,7 +35,10 @@ class LobbyViewController: UIViewController {
         super.viewDidLoad()
 
         resetRoom()
-        configureVideoView()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(0)) {
+            self.configureVideoView()
+        }
 
         roomTextField.attributedPlaceholder = NSAttributedString(
             string: "Room",
