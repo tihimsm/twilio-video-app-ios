@@ -40,7 +40,7 @@ class VideoView: NibView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(0)) {
             print(self.errorView!)
             self.videoView.delegate = self
         }
