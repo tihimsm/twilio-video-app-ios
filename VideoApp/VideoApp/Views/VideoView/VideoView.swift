@@ -40,8 +40,10 @@ class VideoView: NibView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        print(errorView!)
-        videoView.delegate = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
+            print(errorView!)
+            videoView.delegate = self
+        }
     }
 
     func configure(config: Config, contentMode: UIView.ContentMode = .scaleAspectFit) {
