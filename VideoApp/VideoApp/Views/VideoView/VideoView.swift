@@ -44,6 +44,7 @@ class VideoView: NibView {
     override func awakeAfter(using coder: NSCoder) -> Any? {
         print(self.errorView!)
         self.videoView.delegate = self
+        return UIView.init(frame: self.frame)
     }
 
     func configure(config: Config, contentMode: UIView.ContentMode = .scaleAspectFit) {
