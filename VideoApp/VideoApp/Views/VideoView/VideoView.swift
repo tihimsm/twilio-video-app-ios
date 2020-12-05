@@ -41,8 +41,8 @@ class VideoView: NibView {
         super.awakeFromNib()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-            print(errorView!)
-            videoView.delegate = self
+            print(self.errorView!)
+            self.videoView.delegate = self
         }
     }
 
